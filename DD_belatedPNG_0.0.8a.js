@@ -311,6 +311,14 @@ var DD_belatedPNG = {
 				el.parentNode.insertBefore(el.vml[v].shape, el);
 			}
 		}
+    // If the element we are fixing up has a rel attribute see if it is like size_75px-62px
+    // If it is, then let's remove size_ and change - to ,
+    // Then we can use it as the size attribute on c.vml.image.fill to make it the right size
+    var rel = el.getAttribute("rel");
+    if (rel && (typeof rel === "string") && rel.match(/size_\d+px\-\d+px/)) {
+      var size = (rel.replace("size_", "")).replace("-", ",");
+      el.vml.image.fill.size = size;
+    }
 		el.vml.image.shape.fillcolor = 'none'; /* Don't show blank white shapeangle when waiting for image to load. */
 		el.vml.image.fill.type = 'tile'; /* Makes image show up. */
 		el.vml.color.fill.on = false; /* Actually going to apply vml element's style.backgroundColor, so hide the whiteness. */
