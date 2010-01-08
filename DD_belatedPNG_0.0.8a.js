@@ -284,7 +284,7 @@ var DD_belatedPNG = {
 		}
 		el.isImg = false;
 		if (el.nodeName == 'IMG') {
-			if(el.src.toLowerCase().search(/\.png$/) != -1) {
+			if(el.src.toLowerCase().search(/\.png(\?\d+)?$/) != -1) {
 				el.isImg = true;
 				el.style.visibility = 'hidden';
 			}
