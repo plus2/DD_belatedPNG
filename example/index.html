@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <title>Belated PNG fork examples</title>
+
+    <script src="../DD_belatedPNG_0.0.8a.js"></script>
+
+    <style>
+      body {background-color:#121212;text-align:center;padding:1em 0 2em 0;color:#BBE9E1;font-family:"Helvetica Neue", sans-serif;text-rendering: optimizeLegibility}
+      p {text-transform:uppercase;color:#555;font-weight:bold;}
+    </style>
+  </head>
+  <body>
+      <p>(View in IE6)</p>
+      <h1>Fixed</h1>
+      <img src="tester.png" alt="Test PNG, resized from 800px&times;800px to 500px&times;500px" width="500" height="500" class="fix" />
+      <h1>No fix</h1>
+      <img src="tester.png" alt="Test PNG, resized from 800px&times;800px to 500px&times;500px" width="500" height="500" />
+
+      <!--[if lte IE 6]>
+      <script>
+        window.onload = function() {
+          DD_belatedPNG.fix('img.fix');
+        }
+      </script>
+      <![endif]-->
+  </body>
+</html>
