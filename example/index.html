@@ -17,8 +17,8 @@
           tbody th {font-weight:normal}
             /*Images*/
             .bg-image, .bg-sprite {margin:0 auto;display:block;width:36px;height:36px}
-            .bg-image {background:url(icon.png) 0 0 no-repeat}
-            .bg-sprite {background:url(icon-sprite.png) -5px 0 no-repeat;text-decoration:none}
+            .bg-image {background:url(icon.png?1234) 0 0 no-repeat}
+            .bg-sprite {background:url(icon-sprite.png?1234) -5px 0 no-repeat;text-decoration:none}
             .bg-sprite:hover {background-position:-61px 0}
     </style>
   </head>
@@ -54,19 +54,19 @@
           <tr>
             <th>Image element (standard)</th>
             <td>
-              <img src="icon.png" width="36" height="36" />
+              <img src="icon.png?1234" width="36" height="36" />
             </td>
             <td>
-              <img src="icon.png" width="36" height="36" class="fix" />
+              <img src="icon.png?1234" width="36" height="36" class="fix" />
             </td>
           </tr>
           <tr>
             <th>Image element (resized)</th>
             <td>
-              <img src="icon-larger.png" width="36" height="36" />
+              <img src="icon-larger.png?1234" width="36" height="36" />
             </td>
             <td>
-              <img src="icon-larger.png" width="36" height="36" class="fix" />
+              <img src="icon-larger.png?1234" width="36" height="36" class="fix" />
             </td>
           </tr>
         </tbody>
