@@ -311,6 +311,7 @@ var DD_belatedPNG = {
 				el.parentNode.insertBefore(el.vml[v].shape, el);
 			}
 		}
+
 		el.vml.image.shape.fillcolor = 'none'; /* Don't show blank white shapeangle when waiting for image to load. */
 		/* If the height and width attributes are set, then scale to size, if not, display as per usual */
 		if (el.height && el.width){el.vml.image.fill.type = 'frame';} else {el.vml.image.fill.type = 'tile';}
